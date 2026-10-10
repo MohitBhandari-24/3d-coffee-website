@@ -1,1 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ember & Bean Coffee</title>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;800&family=Newsreader:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="stage" aria-hidden="true"></canvas>
+<header>
+  <div class="logo">Ember &amp; Bean</div>
+  <nav><a href="#menu">Menu</a><a href="#visit">Visit</a><button id="cartBtn" aria-label="Open cart">Cart (<span id="cnt">0</span>)</button></nav>
+</header>
+
+<section class="hero">
+  <h1><span>Slow roast.</span><span>Fast morning.</span></h1>
+  <p>Small-batch beans roasted every day, poured into the cup you see turning beside you. Pick a drink, watch it fill, order ahead.</p>
+  <div><a class="cta" href="#menu">Choose your drink</a></div>
+</section>
+
+<section id="menu" class="side">
+  <h2>Today's menu</h2>
+  <p>Tap a drink to pour it into the 3D cup.</p>
+  <div class="grid" id="grid"></div>
+  <div class="hint">Move your mouse over the cards, or drag the page scroll to spin the cup.</div>
+</section>
+
+<section id="visit" class="side">
+  <h2>Come say hi</h2>
+  <p>Twelve seats, one big oak table, and a roaster you can watch from the counter.</p>
+  <div class="hours"><b>Mon–Fri</b><span>7:00 am – 9:00 pm</span><b>Saturday</b><span>8:00 am – 11:00 pm</span><b>Sunday</b><span>8:00 am – 6:00 pm</span></div>
+</section>
+
+<aside id="drawer" aria-label="Your order" aria-hidden="true">
+  <button class="close" id="close" aria-label="Close cart">×</button>
+  <h2>Your order</h2>
+  <div id="items"></div>
+  <div class="tot"><span>Total</span><span id="total">₹0</span></div>
+  <button class="pay" id="pay" disabled>Place order</button>
+</aside>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
 
